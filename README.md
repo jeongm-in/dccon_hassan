@@ -1,17 +1,21 @@
 # 디시콘 핫산
 디시콘을 디스코드에서 쓸 수 있게 해주는 디스코드 봇입니다.
 
-## Demo
-[봇 초대 링크](https://discordapp.com/oauth2/authorize?&client_id=464437182887886850&scope=bot&permissions=101376)
-
-Heroku 무료 Dyno에서 테스트용으로 돌아가고 있는 봇입니다. 사용자가 몰리면 봇 응답이 느려지거나 봇이 꺼질 수 있으며, 예고 없이 봇 작동이 중지될 수 있습니다. 
 
 ## 설치 및 실행
+파이썬 스크립트로 실행
 ```
 $ pip3 install -r requirements.txt
 $ echo "BOT_TOKEN=<YOUR_BOT_TOKEN_HERE>" > .env
-$ echo "PREFIX=<YOUR_PREFIX_HERE>" >.env
+$ echo "PREFIX=<YOUR_PREFIX_HERE>" >> .env
 $ python3 main.py
+```
+
+도커로 실행
+(Dockerfile 에서 BOT_TOKEN, PREFIX 변경 후)
+```
+docker build -t dccon_hassan .
+docker run -d dccon_hassan
 ```
 
 ## 사용법
