@@ -24,12 +24,7 @@ def log(fr, text):
 
 
 BOT_TOKEN = os.getenv('BOT_TOKEN')
-
-if "PREFIX" in os.environ:
-    COMMAND_PREFIX = os.getenv("PREFIX")
-else:
-    COMMAND_PREFIX = "!"
-
+COMMAND_PREFIX = os.getenv("PREFIX", "!")
 DCCON_HOME_URL = 'https://dccon.dcinside.com/'
 DCCON_SEARCH_URL = 'https://dccon.dcinside.com/hot/1/title/'
 DCCON_DETAILS_URL = 'https://dccon.dcinside.com/index/package_detail'
